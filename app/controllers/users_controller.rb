@@ -23,6 +23,15 @@ class UsersController < ApplicationController
     else
       render "edit"
     end
+    
+    def follower
+      @user = User.find(params[:id])
+    end
+    
+    def followed
+      @user = User.find(params[:id])
+    end
+      
   end
 
   private
